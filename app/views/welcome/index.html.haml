@@ -3,5 +3,19 @@
 .row-fluid
   .well{style: "width: 200px"}
   .span10
+%div{style: "height: 40px;"}
+
+- if current_user
+  %h1
+    = "#{current_user.name} 谢谢你登录了我们网站！你已经登录了 #{} 次了，总共登录时间是 #{current_user.online_minutes} 分钟了。"
+- else
+  %h1
+    = "你好，陌生人！你没有登录，或者你还没有注册，但是你已经浏览这个页面 #{} 分钟了。"
+
+
+
+%h1
+  = "现在总共有 #{""} 个注册用户在查看这个网站，有 #{""} 个陌生人在查看这个网站"
+    
 
 
