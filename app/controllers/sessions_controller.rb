@@ -11,6 +11,9 @@ class SessionsController < ApplicationController
       else
         cookies[:auth_token] = user.auth_token
       end
+      puts user.login_times
+      login_times = user.login_times+1
+      user.update_attribute(:login_times, login_times)
       redirect_to root_path
     else
       flash.now[:error]="could not log in!"

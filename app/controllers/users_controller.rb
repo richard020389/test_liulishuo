@@ -5,6 +5,8 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(params[:user])
+    @user.online_minutes = 0
+    @user.login_times = 0
     if @user.save
       redirect_to root_url, notice: "Signed up!"
     else

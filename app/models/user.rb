@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible  :is_login, :name, :online_minutes, :password_confirmation, :password
+  attr_accessible  :is_login, :name, :online_minutes, :password_confirmation, :password, :login_times
   has_secure_password
   validates_presence_of :name, :password
   validates :name, uniqueness: true
