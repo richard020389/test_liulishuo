@@ -1,8 +1,13 @@
 %h1{style: "padding-left:20px;"}
   welcome
-.row-fluid
-  .well{style: "width: 200px"}
-  .span10
+%div
+  - if current_user
+    =link_to "退出",logout_path
+  - else
+    =link_to "登录",login_path
+    <br/>or 
+    =link_to "注册",register_path
+
 %div{style: "height: 40px;"}
 
 - if current_user
