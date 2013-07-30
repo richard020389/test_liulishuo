@@ -1,0 +1,16 @@
+%h1 Log in
+= form_tag sessions_path do
+  =label_tag(:title,"用户名")
+  =text_field_tag(:name, params[:name])
+
+  =label_tag(:password,"密码")
+  =password_field_tag(:password)
+
+  </br>
+  =check_box_tag(:remember_me, 1, params[:remember_me])
+  =label_tag(:remember_me, nil, style:"display: inline;")
+
+  </br>
+  </br>
+  .button=submit_tag("登录")
+

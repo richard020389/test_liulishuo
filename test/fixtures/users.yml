@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  password_digest: MyString
+  auth_token: MyString
+  is_login: false
+  online_minutes: 1
+
+two:
+  name: MyString
+  password_digest: MyString
+  auth_token: MyString
+  is_login: false
+  online_minutes: 1
